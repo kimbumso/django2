@@ -152,7 +152,10 @@ def board_comm_list_page(request, category):
     error_flag = False
     
     if request.method == "POST":
-        title = request.POST['title']
+        #title = request.POST['title']
+        title = request.POST.get('title', '')
+        #해당코드를 쓰면 삭제는 되는데 exception을 탐.. 
+        # 원인은 dict의 key가 리턴이 안되어 에러가 발생한 것으로 키가 없을때 default 값을 반환하도록 변경 2019.11.2
         content = request.POST['content']
         try:
             img_file = request.FILES['img_file']
@@ -285,7 +288,10 @@ def board_modify_result(request):
 @login_required
 def board_delete_result(request):
     if request.method == "POST":
+
         article_id = request.POST['article_id']
+        #article_id = request.POST.get('article_id')
+        #referer = request.POST.get('referer')
         referer = request.POST['referer']
     else:
         article_id = -1

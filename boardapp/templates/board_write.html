@@ -4,6 +4,7 @@
 
 {% block script %}
 {% load static %}<SCRIPT SRC = "{% static 'boardapp/assets/js/boards.js' %}"></SCRIPT>
+{% load static %}<SCRIPT SRC = "{% static 'ckeditor/ckeditor/ckeditor.js' %}"></SCRIPT>
 {% if user.username == "" %}
 <SCRIPT>
 	alert('잘못된 접근입니다.');
@@ -31,7 +32,11 @@
 		</div>
 		<div class="row height-400">
 			<div class="col-1 right"><p class="middle">내용</p></div>
-			<div class="col-11"><textarea name="content" id="content" class="form-width-90"></textarea></div>
+			<div class="col-11"><textarea name="content" id="content" class="form-width-90"> </textarea> <!-- textarea가 공백이면 또 안됨. 한칸은 띄어줘야함..-->
+				<script>
+						CKEDITOR.replace('content'); 
+				</script>			
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-1 right"><p class="middle">이미지</p></div>

@@ -19,7 +19,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 view-content-comm">
-				<p>{{ object.content }}</p>
+				<p>{{ object.content | safe }}</p>
 				{% if object.image %}<img src="{{ object.image.url }}" />{% endif %}
 			</div>
 		</div>

@@ -22,5 +22,9 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('', RedirectView.as_view(url='/boardapp/')),
     path('admin/', admin.site.urls),
+    path('ckeditor/',include('ckeditor_uploader.urls')),
     path('boardapp/', include('boardapp.urls')),
 ]# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

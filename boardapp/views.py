@@ -11,6 +11,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.generic import DetailView
 from datetime import datetime
 from boardapp.models import *
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 

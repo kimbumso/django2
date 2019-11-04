@@ -22,7 +22,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 view-content">
-				<p class="content-box">{{ object.content }}</p>
+				<p class="content-box">{{ object.content | safe }}</p>
 				{% if object.image %}<img src="{{ object.image.url }}" />{% endif %}
 			</div>
 		</div>

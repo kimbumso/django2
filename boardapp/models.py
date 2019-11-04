@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils import timezone
+#from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class UserManager(BaseUserManager):
     def create_user(self, username, password, last_name, email, phone, date_of_birth):
@@ -91,7 +93,8 @@ class Boards(models.Model):
     category = models.ForeignKey(BoardCategories, models.DO_NOTHING)
     user = models.ForeignKey('User', models.DO_NOTHING)
     title = models.CharField(max_length=300)
-    content = models.TextField()
+    #content = RichTextField(blank=True, null=True)
+    content = RichTextUploadingField(blank=True, null=True)
     registered_date = models.DateTimeField(blank=True, null=True)
     last_update_date = models.DateTimeField(blank=True, null=True)
     view_count = models.IntegerField(blank=True, null=True)
@@ -109,7 +112,8 @@ class BoardReplies(models.Model):
     article = models.ForeignKey(Boards, models.DO_NOTHING)
     user = models.ForeignKey('User', models.DO_NOTHING)
     level = models.IntegerField(blank=True, null=True)
-    content = models.TextField()
+    #content = models.TextField()
+    content = RichTextUploadingField(blank=True, null=True)
     reference_reply_id = models.IntegerField(blank=True, null=True)
     registered_date = models.DateTimeField(blank=True, null=True)
     last_update_date = models.DateTimeField(blank=True, null=True)

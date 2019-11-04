@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'boardapp.apps.BoardappConfig',
     'storages',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'awsdjangodb',
-        'USER': '-',
+        'USER': '----',
         'PASSWORD': '----',
         'PORT': '3306',
         'HOST': 'localhost',
@@ -125,15 +127,21 @@ USE_TZ = True
 
 AUTH_USER_MODEL = 'boardapp.user'
 
+# 로그인 성공시 메인페이지로 이동
+LOGIN_REDIRECT_URL = '/boardapp/'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+#ck uploader 
+CKEDITOR_UPLOAD_PATH = 'ckupload/' # create directory in media directory
 
 STATIC_URL = '/static/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 if DEBUG:
     STATIC_URL = '/static/'
-    #STATIC_ROOT = 'static'
+    #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

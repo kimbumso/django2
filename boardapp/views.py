@@ -439,3 +439,6 @@ def board_like_result(request):
 
 def error_page(request):
     return render(request, 'error.html')
+
+def test_main(request):
+    return render(request, 'test_main.html')

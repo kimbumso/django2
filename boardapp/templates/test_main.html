@@ -7,26 +7,15 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/lib/bootstrap/css/bootstrap.min.css' %}" />
-  <!-- Libraries CSS Files -->
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/lib/font-awesome/css/font-awesome.min.css' %}" />
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/lib/animate/animate.min.css' %}" />
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/lib/ionicons/css/ionicons.min.css' %}" />
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/lib/owlcarousel/assets/owl.carousel.min.css' %}" />
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/lib/lightbox/css/lightbox.min.css' %}" />
-
-  <!-- Main Stylesheet File -->
-  
-  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/BizPage/css/style.css' %}" />
-	{% block script %}{% endblock %}
+  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/assets/css/bootstrap.css' %}" />
+  <!-- Main Stylesheet File --> 
+  {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/assets/css/style.css' %}" />
+ <!-- {% load static %}<LINK REL='STYLESHEET' HREF="{% static 'boardapp/assets/css/main.css' %}" /> -->
+  {% block script %}{% endblock %}
   <!-- =======================================================
     Theme Name: BizPage
     Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -161,89 +150,25 @@
   <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>AWS Django Web</h3>
-            <p>so hard</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact</h4>
-            <p>
-              주소 : ㅎㅎㅎㅎㅎㅎ <br>
-              <strong>Phone:</strong> +82 0000 0000 0000<br>
-              <strong>Email:</strong> k101413@naver.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>AWS django Web</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- #footer -->
+  <DIV ID="footer">
+		<DIV ID="row">
+			<DIV CLASS="col-12 center">Copyright by Digitalbooks / <A href="mailto:k1014131@naver.com">구찌뽕 개발자</A></DIV>
+		</DIV>
+	</DIV>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/jquery/jquery.min.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/jquery/jquery-migrate.min.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/bootstrap/js/bootstrap.bundle.min.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/easing/easing.min.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/superfish/hoverIntent.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/superfish/superfish.min.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/wow/wow.min.js' %}" ></SCRIPT>
-	{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/waypoints/waypoints.min.js' %}" ></SCRIPT>
-  {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/counterup/counterup.min.js' %}" ></SCRIPT>
-  {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/owlcarousel/owl.carousel.min.js' %}" ></SCRIPT>
-  {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/isotope/isotope.pkgd.min.js' %}" ></SCRIPT>
-  {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/lightbox/js/lightbox.min.js' %}" ></SCRIPT>
-  {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/lib/touchSwipe/jquery.touchSwipe.min.js' %}" ></SCRIPT>
+	{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/jquery/jquery.min.js' %}" ></SCRIPT>
+	{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/jquery/jquery-migrate.min.js' %}" ></SCRIPT>
+	{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/bootstrap/js/bootstrap.bundle.min.js' %}" ></SCRIPT>
+	{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/superfish/hoverIntent.js' %}" ></SCRIPT>
+	{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/superfish/superfish.min.js' %}" ></SCRIPT>
+	{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/wow/wow.min.js' %}" ></SCRIPT>
   <!-- Contact Form JavaScript File -->
-  {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/contactform/contactform.js' %}" ></SCRIPT>
+  {% load static %}<SCRIPT src="{% static 'boardapp/assets/js/contactform/contactform.js' %}" ></SCRIPT>
  
   <!-- Template Main Javascript File -->
   {% load static %}<SCRIPT src="{% static 'boardapp/BizPage/js/main.js' %}" ></SCRIPT>

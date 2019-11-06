@@ -54,79 +54,86 @@
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
+
+
   <section id="intro">
-	<div class="intro-container">
-	  <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-
-		<ol class="carousel-indicators"></ol>
-
-		<div class="carousel-inner" role="listbox">
-
-		  <div class="carousel-item active">
-			<div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
-			<div class="carousel-container">
-			  <div class="carousel-content">
-				<h2>link site 1 </h2>
-				<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+		<div class="intro-container">
+		  <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+	
+			<ol class="carousel-indicators"></ol>
+	
+			<div class="carousel-inner" role="listbox">
+	
+			  <div class="carousel-item active">
+				<div class="carousel-background">
+					{% load static %}<img src="{% static 'boardapp/assets/images/main/test.jpg' %}" alt=""></div>
+				<div class="carousel-container">
+				  <div class="carousel-content">
+					<h2>link site 1 </h2>
+					<a href="http://www.naver.com" class="btn-get-started scrollto">Get Started</a>
+				  </div>
+				</div>
 			  </div>
-			</div>
-		  </div>
-
-		  <div class="carousel-item">
-			<div class="carousel-background"><img src="img/intro-carousel/2.jpg" alt=""></div>
-			<div class="carousel-container">
-			  <div class="carousel-content">
-				<h2>link site 2 </h2>
-				<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+	
+			  <div class="carousel-item">
+				<div class="carousel-background">
+					{% load static %}<img src="{% static 'boardapp/assets/images/main/test2.jpg' %}" alt=""></div>
+				<div class="carousel-container">
+				  <div class="carousel-content">
+					<h2>link site 2 </h2>
+					<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+				  </div>
+				</div>
 			  </div>
-			</div>
-		  </div>
-
-		  <div class="carousel-item">
-			<div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
-			<div class="carousel-container">
-			  <div class="carousel-content">
-				<h2>link site 3 </h2>
-				<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+	
+			  <div class="carousel-item">
+				<div class="carousel-background">
+					{% load static %}<img src="{% static 'boardapp/assets/images/main/test3.jpg' %}" alt=""></div>
+				<div class="carousel-container">
+				  <div class="carousel-content">
+					<h2>link site 3 </h2>
+					<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+				  </div>
+				</div>
 			  </div>
-			</div>
-		  </div>
-
-		  <div class="carousel-item">
-			<div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
-			<div class="carousel-container">
-			  <div class="carousel-content">
-				<h2>link site 4 </h2>
-				<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+	
+			  <div class="carousel-item">
+				<div class="carousel-background">
+					{% load static %}<img src="{% static 'boardapp/assets/images/main/test4.jpg' %}" alt=""></div>
+				<div class="carousel-container">
+				  <div class="carousel-content">
+					<h2>link site 4 </h2>
+					<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+				  </div>
+				</div>
 			  </div>
-			</div>
-		  </div>
-
-		  <div class="carousel-item">
-			<div class="carousel-background"><img src="img/intro-carousel/5.jpg" alt=""></div>
-			<div class="carousel-container">
-			  <div class="carousel-content">
-				<h2>link site 5 </h2>
-				<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+	
+			  <div class="carousel-item">
+				<div class="carousel-background">
+					{% load static %}<img src="{% static 'boardapp/assets/images/main/test5.jpg' %}" alt=""></div>
+				<div class="carousel-container">
+				  <div class="carousel-content">
+					<h2>link site 5 </h2>
+					<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+				  </div>
+				</div>
 			  </div>
+	
 			</div>
+	
+			<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+			  <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+	
+			<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+	
 		  </div>
-
 		</div>
-
-		<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
-		  <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
-		  <span class="sr-only">Previous</span>
-		</a>
-
-		<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
-		  <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
-		  <span class="sr-only">Next</span>
-		</a>
-
-	  </div>
-	</div>
-  </section><!-- #intro -->  
+	  </section><!-- #intro -->  
 <main id="main">
 	<section>
 			{% block content %}{% endblock %}
@@ -146,8 +153,7 @@
 {% load static %}<SCRIPT src="{% static 'boardapp/assets/js/lib/wow/wow.min.js' %}" ></SCRIPT>
 <!-- Contact Form JavaScript File -->
 {% load static %}<SCRIPT src="{% static 'boardapp/assets/js/contactform/contactform.js' %}" ></SCRIPT>
-
 <!-- Template Main Javascript File -->
-{% load static %}<SCRIPT src="{% static 'boardapp/BizPage/js/main.js' %}" ></SCRIPT>
+{% load static %}<SCRIPT src="{% static 'boardapp/assets/js/intro.js' %}" ></SCRIPT>
 </BODY>
 </HTML>

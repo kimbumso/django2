@@ -1,6 +1,6 @@
 boto3==1.9.244
 botocore==1.12.253
-Django==2.1
+Django==2.2.13
 django-ckeditor==5.8.0
 django-js-asset==1.2.2
 django-storages==1.7.2

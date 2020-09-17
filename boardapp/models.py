@@ -96,9 +96,9 @@ class Boards(models.Model):
     #content = RichTextField(blank=True, null=True)
     content= RichTextUploadingField(blank=True, null=True)
     #content = RichTextUploadingField(blank=True, null=True, config_name='awesome_ckeditor')
-    registered_date = models.DateTimeField(blank=True, null=True)
+    registered_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
     last_update_date = models.DateTimeField(blank=True, null=True)
-    view_count = models.IntegerField(blank=True, null=True)
+    view_count = models.IntegerField(blank=True, null=True, default=0)
     image = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):

@@ -77,7 +77,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'dbdjango.wsgi.application'
 
 
-# Database
+# Database  -- aws
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 '''
 DATABASES = {
@@ -96,6 +96,8 @@ DATABASES = {
 }
 '''
 # Debug =True
+# Database  -- localhost
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
